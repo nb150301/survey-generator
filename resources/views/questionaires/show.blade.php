@@ -5,9 +5,10 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ $questionaire->title }}</div>
+                    <div class="card-header"><h2>{{ $questionaire->title }}</h2></div>
 
                     <div class="card-body">
+                        <a href="/questionaires/{{$questionaire->id}}/edit" class="btn btn-dark">Edit this Questionaire</a>
                         <a href="/questionaires/{{$questionaire->id}}/questions/create" class="btn btn-dark">Add New Question</a>
                         <a href="/surveys/{{$questionaire->id}}-{{Str::slug($questionaire->title)}}" class="btn btn-dark">Take Survey</a>
                         <a href="/surveys/{{$questionaire->id}}-{{Str::slug($questionaire->title)}}">/surveys/{{$questionaire->id}}-{{Str::slug($questionaire->title)}}</a>
