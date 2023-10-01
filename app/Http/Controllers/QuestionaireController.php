@@ -48,4 +48,20 @@ class QuestionaireController extends Controller
 
         return view('questionaires.show', compact('questionaire', 'responses_count', 'answers_count'));
     }
+
+    public function edit(Questionaire $questionaire)
+    {
+        return view('questionaires.edit', compact('questionaire'));
+    }
+    public function update(Request $request, Questionaire $questionaire)
+    {
+        $data = $request->validate([
+            'title' => 'required',
+            'purpose' => 'required',
+        ]);
+
+
+        $questionaire->update($data);
+        return redirect('/questionaires/' . $questionaire->id);
+    }
 }

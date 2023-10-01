@@ -24,6 +24,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['prefix' => 'questionaires', 'namespace' => '\App\Http\Controllers'], function () {
     Route::post('', 'QuestionaireController@store');
     Route::get('/create', 'QuestionaireController@create');
+    Route::put('/{questionaire}/update', 'QuestionaireController@update')->name('questionaires.questionaire.update');
+    Route::get('/{questionaire}/edit', 'QuestionaireController@edit');
     Route::get('/{questionaire}', 'QuestionaireController@show');
 
     Route::group(['prefix' => '/{questionaireId}'], function () {

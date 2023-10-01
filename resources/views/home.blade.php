@@ -18,14 +18,21 @@
                 </div>
             </div>
             @foreach($questionaires as $questionaire)
+                <div class="card mt-5">
+                    @if ($questionaire->title)
+                        <div class="card-header">
+                            <h2>{{ $questionaire->title }}</h2>
+                        </div>
+                    @endif
 
-                <div class="card">
-                    <div class="card-header">{{ $questionaire->title }}</div>
-
+                    @if ($questionaire->purpose)
                     <div class="card-body">
-                        <h2>{{$questionaire->purpose}}</h2>
+                        <h3>{{$questionaire->purpose}}</h3>
                     </div>
-                    <a href="questionaires/{{$questionaire->id}}">Details</a>
+                    @endif
+                    <div class="card-footer">
+                        <a href="questionaires/{{ $questionaire->id }}">Details</a>
+                    </div>
                 </div>
             @endforeach
 
