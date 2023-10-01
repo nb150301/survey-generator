@@ -61,8 +61,7 @@ class QuestionaireController extends Controller
         ]);
 
 
-        $questionaire = $questionaire->update($data);
-        dd($questionaire);
+        $questionaire->update($data);
         return redirect('/questionaires/' . $questionaire->id);
     }
 }

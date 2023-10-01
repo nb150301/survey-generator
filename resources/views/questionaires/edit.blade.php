@@ -8,7 +8,7 @@
                     <div class="card-header">{{ __('Dashboard') }}</div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('questionaires.questionaire.update', ['questionaire' => $questionaire]) }}">
-                            <input type="hidden" name="_method" value="PUT"/>
+                            @method('PUT')
                             @csrf
                             <div class="form-group">
                                 <label for="title">Title</label>
