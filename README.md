@@ -1,7 +1,5 @@
-TO DO LIST:
+# Survey Generator
 
-Update giao diện, kết hợp ReactJS.
+## [ 👉 TODOLIST]([https://github.com/loia5tqd001/Dang-Ky-Hoc-Phan-UIT/issues/20](https://github.com/nb150301/survey-generator/issues/3)
 
-Thêm page quản lý resource và page view các public resource
-
-Thêm phần tạo bài học tiếng anh đục lỗ
+## Updating ...
